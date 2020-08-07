@@ -1,0 +1,61 @@
+header > nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+
+    & > div {
+        @include flexWrapCenter;
+        justify-content: space-between;
+    }
+
+    & > div > ul {
+        @include flexWrapCenter;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    & > div > ul.menu {
+        @media (max-width: $md) {
+            background-color: var(--backgroundColor);
+            position: fixed;
+            top: 100vh;
+            left: 0;
+            transform: translateY(-$fixNavHeight);
+            justify-content: center;
+            width: 100%;
+            height: $fixNavHeight;
+            border-top: 1px solid $primaryColor;
+        }
+    }
+
+    & a {
+        padding-left: 3rem;
+        display: block;
+        color: $primaryColor;
+        text-transform: uppercase;
+    }
+}
+
+footer > nav {
+    width: 100%;
+
+    & > div > ul {
+        @include flexWrapCenter;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    & > div > ul > li > * {
+        font-weight: bold;
+        padding: .5rem;
+        display: block;
+        color: $lightColor;
+    }
+    & > div > ul > li > a:hover{
+        text-decoration: underline;
+        color: $primaryColor;
+    }
+}

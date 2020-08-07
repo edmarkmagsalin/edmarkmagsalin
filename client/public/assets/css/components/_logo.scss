@@ -1,0 +1,11 @@
+.logo a {
+    @include flexWrapCenter;
+    font-size: 1.5rem;
+    color: inherit;
+    font-weight: bold;
+    
+    & > img {
+        width: 50px;
+        margin-right: .5rem;
+    }
+}

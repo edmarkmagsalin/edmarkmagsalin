@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import Logo from '../components/Logo'
 
 export class Footer extends Component {
     render() {
         return (
             <footer>
-                footer
+                <Logo />
             </footer>
         )
     }

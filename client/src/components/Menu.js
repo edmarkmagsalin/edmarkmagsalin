@@ -1,16 +1,10 @@
-import React, { Component } from 'react'
-import logo from '../../../src/logo.svg'
+import React, { Component, Fragment } from 'react'
 
-export class Navbar extends Component {
+export class Menu extends Component {
     render() {
         return (
-            <nav>
-                <ul>
-                    <li>
-                        <img src={logo} alt=""/>
-                    </li>
-                </ul>
-                <ul>
+            <Fragment>
+                <ul className="menu">
                     <li>
                         <a href="#about">About</a>
                     </li>
@@ -21,9 +15,9 @@ export class Navbar extends Component {
                         <a href="#contact">Contact</a>
                     </li>
                 </ul>
-            </nav>
+            </Fragment>
         )
     }
 }
 
-export default Navbar
+export default Menu

@@ -20,10 +20,10 @@ app.use((req, res, next) => {
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 // An api endpoint that returns a short list of items
-app.get('/api/list', (req,res) => {
-    var list = ["item1", "item2", "item3"];
-    res.json(list);
-});
+// app.get('/api/list', (req,res) => {
+//     var list = ["item1", "item2", "item3"];
+//     res.json(list);
+// });
 
 // Handles any requests that don't match the ones above
 app.get('*', (req,res) =>{

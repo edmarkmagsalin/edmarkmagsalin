@@ -1,21 +1,25 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 // layout
-import Navbar from './components/layouts/Navbar'
-import Footer from './components/layouts/Footer'
+import Navbar from './layouts/Navbar'
+import Banner from './layouts/Banner'
+import Footer from './layouts/Footer'
 
 // main
-import Home from './components/pages/Home'
+import Home from './pages/Home'
 
 function App() {
   return (
-    <div>
-      <Navbar />
+    <Fragment>
+      <header>
+        <Navbar />
+        <Banner />
+      </header>
         <main>
           <Home />
         </main>
       <Footer />
-    </div>
+    </Fragment>
   );
 }
 
