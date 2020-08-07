@@ -6,7 +6,8 @@ export class Home extends Component {
         return (
             <div>
                 <Header />
-                Home
+                
+    <i class="fab fa-html5"></i>
             </div>
         )
     }
