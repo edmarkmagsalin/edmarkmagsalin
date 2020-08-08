@@ -5,7 +5,7 @@ import Menu from '../components/Menu'
 export class Navbar extends Component {
     render() {
         return (
-            <nav className="bg-blur">
+            <nav className="top-nav bg-light-overlay">
                 <div className="container">
                     <Logo />
                     <Menu />

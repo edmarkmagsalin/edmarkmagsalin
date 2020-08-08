@@ -84,7 +84,7 @@ input[type=button] {
     }
 
     &.btn-secondary {
-        background-color: transparent;
+        background-color: $lightColor;
         position: relative;
         padding-right: 3rem;
         color: $primaryColor;

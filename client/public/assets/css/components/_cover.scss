@@ -1,17 +1,20 @@
 .cover {
-    flex-basis: 100%;
-    @include flexWrapCenter;
-    flex-direction: column;
-    justify-content: center;
     min-height: 400px;
-    padding: 1rem 2rem;
-    text-align: center;
-    margin-top: $fixNavHeight;
+    padding: 1rem 0;
+    padding-top: $fixNavHeight;
 
     & h1 {
+        text-shadow: 5px 5px 5px transparentize($darkColor, .85);
+    }
+
+    & p {
+        margin-top: 0;
         color: $primaryColor;
-        font-size: 2rem;
-        text-shadow: 3px 3px 10px $darkColor;
+        font-weight: 400;
+    }
+
+    & a {
+        display: inline-block;
     }
 }
 

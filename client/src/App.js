@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 
 // layout
 import Navbar from './layouts/Navbar'
-import Banner from './layouts/Banner'
+import Cover from './layouts/Cover'
 import Footer from './layouts/Footer'
 
 // main
@@ -13,7 +13,7 @@ function App() {
     <Fragment>
       <header>
         <Navbar />
-        <Banner />
+        <Cover />
       </header>
         <main>
           <Home />

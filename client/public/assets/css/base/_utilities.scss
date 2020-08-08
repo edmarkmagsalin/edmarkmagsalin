@@ -45,8 +45,12 @@
         backdrop-filter: blur(10px);
     }
 
-    &-overlay {
+    &-dark-overlay {
         background-color: transparentize($grayColor, .5);
+    }
+
+    &-light-overlay {
+        background-color: transparentize($lightColor, .5);
     }
 
     &-img1-overlay {
@@ -84,15 +88,18 @@
 
 .two-column {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding: 0;
 
+    @media (max-width: $md) {
+        flex-wrap: wrap;
+    }
+
     & > * {
         flex-basis: 50%;
         padding: 1rem;
-        @media (max-width: $sm) {
+        @media (max-width: $md) {
             flex-basis: 100%;
         }
     }

@@ -1,11 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
+import About from '../components/About'
+import Projects from '../components/Projects'
 
 export class Home extends Component {
     render() {
         return (
-            <div>
-                <i className="fab fa-html5"></i>
-            </div>
+            <Fragment>
+                <About />
+                <Projects />
+            </Fragment>
         )
     }
 }

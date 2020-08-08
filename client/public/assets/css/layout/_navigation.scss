@@ -1,7 +1,9 @@
-header > nav {
+nav.top-nav {
+    @include flexWrapCenter;
     position: fixed;
     top: 0;
     width: 100%;
+    height: $fixNavHeight;
     z-index: 99;
 
     & > div {
@@ -16,25 +18,50 @@ header > nav {
         margin: 0;
     }
 
-    & > div > ul.menu {
+    & > div > ul.top-menu {
         @media (max-width: $md) {
             background-color: var(--backgroundColor);
             position: fixed;
             top: 100vh;
             left: 0;
             transform: translateY(-$fixNavHeight);
-            justify-content: center;
+            justify-content: space-evenly;
             width: 100%;
             height: $fixNavHeight;
             border-top: 1px solid $primaryColor;
         }
     }
+}
 
-    & a {
-        padding-left: 3rem;
+
+
+ul.top-menu {
+    & > li > a {
+        margin-left: 3rem;
         display: block;
         color: $primaryColor;
         text-transform: uppercase;
+        position: relative;
+        @media (max-width: $md) {
+            margin-left: 0;
+        }
+    }
+
+    & > li > a:focus {
+        outline-color: transparent;
+    }
+    & > li > a::after {
+        content: '';
+        position: absolute;
+        top: 1.5rem;
+        left: 0;
+        width: 0;
+        height: .2rem;
+        background-color: $primaryColor;
+        transition: all ease-out $fastDuration;
+    }
+    & > li > a:hover::after {
+        width: 2rem;
     }
 }
 

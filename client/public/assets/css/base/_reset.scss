@@ -19,6 +19,23 @@ body {
     transition: all $fastDuration ease-in-out;
 }
 
+h1 {
+    color: $primaryColor;
+    font-size: 5rem;
+    margin-bottom: 0;
+}
+
+h2 {
+    color: $primaryColor;
+    font-size: 3.5rem;
+    margin-bottom: 0;
+}
+
+section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
 a {
     text-decoration: none;
     color: $primaryColor;
@@ -32,8 +49,8 @@ a {
 }
 
 ::selection {
-    background-color: $secondaryColor;
-    color: inherit;
+    background-color: $primaryColor;
+    color: $lightColor;
 }
 
 textarea {
