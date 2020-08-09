@@ -1,3 +1,20 @@
+ul.menu-row {
+    @include flexWrapCenter;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.menu-column {
+    @include flexWrapCenter;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
 nav.top-nav {
     @include flexWrapCenter;
     position: fixed;
@@ -10,32 +27,22 @@ nav.top-nav {
         @include flexWrapCenter;
         justify-content: space-between;
     }
-
-    & > div > ul {
-        @include flexWrapCenter;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    & > div > ul.top-menu {
-        @media (max-width: $md) {
-            background-color: var(--backgroundColor);
-            position: fixed;
-            top: 100vh;
-            left: 0;
-            transform: translateY(-$fixNavHeight);
-            justify-content: space-evenly;
-            width: 100%;
-            height: $fixNavHeight;
-            border-top: 1px solid $primaryColor;
-        }
-    }
 }
 
 
 
 ul.top-menu {
+    @media (max-width: $md) {
+        background-color: var(--backgroundColor);
+        position: fixed;
+        top: 100vh;
+        left: 0;
+        transform: translateY(-$fixNavHeight);
+        justify-content: space-evenly;
+        width: 100%;
+        height: $fixNavHeight;
+        border-top: 1px solid $primaryColor;
+    }
     & > li > a {
         margin-left: 3rem;
         display: block;
@@ -65,24 +72,11 @@ ul.top-menu {
     }
 }
 
-footer > nav {
-    width: 100%;
+ul.bottom-menu {
+    justify-content: center;
+    margin-bottom: 1rem;
 
-    & > div > ul {
-        @include flexWrapCenter;
-        justify-content: center;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    & > div > ul > li > * {
-        font-weight: bold;
-        padding: .5rem;
-        display: block;
-        color: $lightColor;
-    }
-    & > div > ul > li > a:hover{
-        text-decoration: underline;
-        color: $primaryColor;
+    & > li {
+        margin: auto 1rem;
     }
 }

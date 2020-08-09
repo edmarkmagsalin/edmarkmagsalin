@@ -1,6 +1,12 @@
-body > footer {
+footer {
+    background-color: $darkColor;
     padding: 2rem 0;
     @media (max-width: $md) {
         margin-bottom: $fixNavHeight;
     }
+}
+
+.disclaimer {
+    text-align: center;
+    color: $lightColor;
 }

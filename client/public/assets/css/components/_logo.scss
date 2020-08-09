@@ -1,5 +1,7 @@
 .logo {
-    @include flexWrapCenter;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
     & a {
         font-size: 1.5rem;
         color: inherit;
@@ -8,5 +10,11 @@
     
     & > img {
         width: 50px;
+    }
+
+    &-label {
+        color: $lightColor;
+        display: inline-block;
+        margin-left: 1rem;
     }
 }

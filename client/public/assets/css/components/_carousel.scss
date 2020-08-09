@@ -1,0 +1,15 @@
+.carousel {
+    display: flex;
+    overflow: hidden;
+
+    &__item {
+        flex-basis: 100%;
+        border: 1px solid $primaryColor;
+    }
+
+    &__image {
+        width: 100%;
+        max-width: 560px;
+        height: auto;
+    }
+}
