@@ -2,8 +2,13 @@
     width: 100%;
     max-width: 1366px;
     margin: 0 auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+}
+
+.anchor-point {
+    display: block;
+    position: relative;
+    top: -$fixTopNavHeight;
+    visibility: hidden;
 }
 
 .overflow-h {
@@ -35,6 +40,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.fix-nav-spacer {
+    margin-top: $fixTopNavHeight;
 }
 
 .bg {

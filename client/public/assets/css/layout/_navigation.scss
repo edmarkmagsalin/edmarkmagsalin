@@ -20,7 +20,7 @@ nav.top-nav {
     position: fixed;
     top: 0;
     width: 100%;
-    height: $fixNavHeight;
+    height: $fixTopNavHeight;
     z-index: 99;
 
     & > div {
@@ -37,10 +37,10 @@ ul.top-menu {
         position: fixed;
         top: 100vh;
         left: 0;
-        transform: translateY(-$fixNavHeight);
+        transform: translateY(-$fixBottomNavHeight);
         justify-content: space-evenly;
         width: 100%;
-        height: $fixNavHeight;
+        height: $fixBottomNavHeight;
         border-top: 1px solid $primaryColor;
     }
     & > li > a {

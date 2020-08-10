@@ -2,7 +2,7 @@ footer {
     background-color: $darkColor;
     padding: 2rem 0;
     @media (max-width: $md) {
-        margin-bottom: $fixNavHeight;
+        margin-bottom: $fixBottomNavHeight;
     }
 }
 

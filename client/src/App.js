@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react';
+import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 // layout
 import Navbar from './layouts/Navbar'
@@ -7,19 +8,31 @@ import Footer from './layouts/Footer'
 
 // main
 import Home from './pages/Home'
+import Test from './pages/Test'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
-    <Fragment>
+    <Router>
       <header>
-        <Navbar />
-        <Cover />
+      <Navbar />
+      <Switch>
+        <Route exact path='/' component={Cover} />
+      </Switch>
       </header>
-        <main>
-          <Home />
-        </main>
-      <Footer />
-    </Fragment>
+      <main>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/test' component={Test} />
+          <Route>
+            <NotFound />
+          </Route>
+        </Switch>
+      </main>
+      <footer>
+        <Footer />
+      </footer>
+    </Router>
   );
 }
 
