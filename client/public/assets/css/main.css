@@ -101,7 +101,7 @@ ul.bottom-menu {
 }
 
 ul.bottom-menu > li {
-  margin: auto 1rem;
+  margin: auto .5rem;
 }
 
 header {
@@ -555,13 +555,14 @@ footer {
 
 .carousel__item {
   flex-basis: 100%;
-  border: 1px solid #3a678c;
 }
 
 .carousel__image {
+  display: flex;
+  margin: auto;
   width: 100%;
-  max-width: 560px;
   height: auto;
+  max-width: 560px;
 }
 
 .cover {
@@ -899,12 +900,12 @@ ul.socials > li {
 }
 
 ul.socials > li > a {
-  font-size: 2rem;
+  display: inline-block;
   color: white;
+  width: 30px;
 }
 
 ul.socials > li > a:hover {
-  font-size: 2rem;
   color: #3a678c;
 }
 
@@ -936,6 +937,12 @@ body {
   color: var(--color);
   background-color: var(--backgroundColor);
   transition: all 0.25s ease-in-out;
+}
+
+body > div {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -1119,11 +1126,11 @@ textarea {
 }
 
 .bg-dark-overlay {
-  background-color: rgba(112, 112, 112, 0.5);
+  background-color: rgba(38, 38, 38, 0.8);
 }
 
 .bg-light-overlay {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .bg-img1-overlay {
@@ -1131,6 +1138,10 @@ textarea {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.hide {
+  display: none;
 }
 
 @media (max-width: 576px) {
@@ -1154,80 +1165,6 @@ textarea {
 @media (max-width: 1200px) {
   .xl-hide {
     display: none;
-  }
-}
-
-.two-column {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  padding: 0;
-}
-
-@media (max-width: 768px) {
-  .two-column {
-    flex-wrap: wrap;
-  }
-}
-
-.two-column > * {
-  flex-basis: 50%;
-  padding: 1rem;
-}
-
-@media (max-width: 768px) {
-  .two-column > * {
-    flex-basis: 100%;
-  }
-}
-
-.three-column {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: start;
-  padding: 0;
-}
-
-.three-column > * {
-  flex-basis: 33%;
-  padding: 1rem;
-}
-
-@media (max-width: 768px) {
-  .three-column > * {
-    flex-basis: 50%;
-  }
-}
-
-@media (max-width: 576px) {
-  .three-column > * {
-    flex-basis: 100%;
-  }
-}
-
-.four-column {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-}
-
-.four-column > * {
-  flex-basis: 25%;
-  padding: 1rem;
-}
-
-@media (max-width: 768px) {
-  .four-column > * {
-    flex-basis: 50%;
-  }
-}
-
-@media (max-width: 576px) {
-  .four-column > * {
-    flex-basis: 100%;
   }
 }
 

@@ -17,6 +17,12 @@ body {
     color: var(--color);
     background-color: var(--backgroundColor);
     transition: all $fastDuration ease-in-out;
+
+    & > div {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 h1 {

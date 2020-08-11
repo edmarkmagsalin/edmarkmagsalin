@@ -7,12 +7,12 @@ ul.socials {
     }
 
     & > li > a {
-        font-size: 2rem;
+        display: inline-block;
         color: $lightColor;
+        width: 30px;
     }
     
     & > li > a:hover {
-        font-size: 2rem;
         color: $primaryColor;
     }
 
