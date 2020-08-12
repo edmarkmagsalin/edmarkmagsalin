@@ -1,16 +1,17 @@
 .carousel {
-    display: flex;
     overflow: hidden;
+    padding-top: 1rem;
 
     &__item {
-        flex-basis: 100%;
+        width: 100%;
+        margin-bottom: 2rem;
     }
 
     &__image {
-        display: flex;
-        margin: auto;
         width: 100%;
         height: auto;
         max-width: 560px;
+        border: 2px solid $grayColor;
+        border-radius: 1rem;
     }
 }

@@ -1,7 +1,23 @@
 .container {
     width: 100%;
     max-width: 1366px;
-    margin: 0 auto;
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    @media (min-width: $md) {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    @media (min-width: $lg) {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+}
+
+.container-fluid {
+    width: 100%;
 }
 
 .anchor-point {
@@ -34,6 +50,10 @@
 // display
 .d-inline-block {
     display: inline-block;
+}
+
+.d-flex {
+    display: flex;
 }
 
 .d-flexCenter {

@@ -57,23 +57,15 @@ section {
 }
 
 section, nav {
-    padding-left: 1rem;
-    padding-right: 1rem;
-
-    @media (min-width: $md) {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-
-    @media (min-width: $lg) {
-        padding-left: 3rem;
-        padding-right: 3rem;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 a {
     text-decoration: none;
     color: $primaryColor;
+    transition: color $normalDuration ease-out;
     &:hover {
         color: lighten($primaryColor, 5);
     }

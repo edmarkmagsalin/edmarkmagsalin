@@ -37,7 +37,7 @@ nav.top-nav {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 100px;
+  height: 80px;
   z-index: 99;
 }
 
@@ -549,27 +549,33 @@ footer {
 }
 
 .carousel {
-  display: flex;
   overflow: hidden;
+  padding-top: 1rem;
 }
 
 .carousel__item {
-  flex-basis: 100%;
+  width: 100%;
+  margin-bottom: 2rem;
 }
 
 .carousel__image {
-  display: flex;
-  margin: auto;
   width: 100%;
   height: auto;
   max-width: 560px;
+  border: 2px solid #707070;
+  border-radius: 1rem;
 }
 
 .cover {
   display: flex;
   align-items: center;
   min-height: 400px;
-  padding-top: 100px;
+  padding-top: 80px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  flex-basis: 100%;
 }
 
 .cover h1 {
@@ -656,7 +662,7 @@ video {
 .picture-frame {
   width: 100%;
   max-width: 350px;
-  height: 250px;
+  height: auto;
   background-color: #3a678c;
   border-radius: 130px;
 }
@@ -799,9 +805,7 @@ button.btn-secondary:hover,
 input[type=submit].btn-secondary:hover,
 input[type=reset].btn-secondary:hover,
 input[type=button].btn-secondary:hover {
-  background-color: #41749e;
   border-color: #41749e;
-  color: white;
 }
 
 .btn.btn-secondary::after,
@@ -820,6 +824,38 @@ button.btn-secondary:hover::after,
 input[type=submit].btn-secondary:hover::after,
 input[type=reset].btn-secondary:hover::after,
 input[type=button].btn-secondary:hover::after {
+  right: 1.5rem;
+}
+
+.btn.btn-tertiary,
+button.btn-tertiary,
+input[type=submit].btn-tertiary,
+input[type=reset].btn-tertiary,
+input[type=button].btn-tertiary {
+  border: 0;
+  padding: 0;
+  position: relative;
+  padding-right: 3rem;
+  color: #3a678c;
+  font-weight: bold;
+}
+
+.btn.btn-tertiary::after,
+button.btn-tertiary::after,
+input[type=submit].btn-tertiary::after,
+input[type=reset].btn-tertiary::after,
+input[type=button].btn-tertiary::after {
+  content: '>';
+  position: absolute;
+  transition: ease-out 0.25s;
+  right: 1.8rem;
+}
+
+.btn.btn-tertiary:hover::after,
+button.btn-tertiary:hover::after,
+input[type=submit].btn-tertiary:hover::after,
+input[type=reset].btn-tertiary:hover::after,
+input[type=button].btn-tertiary:hover::after {
   right: 1.5rem;
 }
 
@@ -977,27 +1013,15 @@ section {
 }
 
 section, nav {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-@media (min-width: 768px) {
-  section, nav {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-
-@media (min-width: 992px) {
-  section, nav {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 a {
   text-decoration: none;
   color: #3a678c;
+  transition: color 0.5s ease-out;
 }
 
 a:hover {
@@ -1053,13 +1077,32 @@ textarea {
 .container {
   width: 100%;
   max-width: 1366px;
-  margin: 0 auto;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+.container-fluid {
+  width: 100%;
 }
 
 .anchor-point {
   display: block;
   position: relative;
-  top: -100px;
+  top: -80px;
   visibility: hidden;
 }
 
@@ -1087,6 +1130,10 @@ textarea {
   display: inline-block;
 }
 
+.d-flex {
+  display: flex;
+}
+
 .d-flexCenter {
   display: flex;
   align-items: center;
@@ -1094,7 +1141,7 @@ textarea {
 }
 
 .fix-nav-spacer {
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 .bg {

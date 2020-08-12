@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import logo from '../logo.svg'
+import logo from '../assets/images/logo/logo.svg'
 
 export class Logo extends Component {
     render() {

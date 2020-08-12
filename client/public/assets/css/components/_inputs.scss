@@ -91,9 +91,7 @@ input[type=button] {
     }
 
     &.btn-secondary:hover {
-        background-color: lighten($primaryColor, 5);
         border-color: lighten($primaryColor, 5);
-        color: $lightColor;
     }
 
     &.btn-secondary::after {
@@ -104,6 +102,26 @@ input[type=button] {
     }
 
     &.btn-secondary:hover::after {
+        right: 1.5rem;
+    }
+
+    &.btn-tertiary {
+        border: 0;
+        padding: 0;
+        position: relative;
+        padding-right: 3rem;
+        color: $primaryColor;
+        font-weight: bold;
+    }
+
+    &.btn-tertiary::after {
+        content: '>';
+        position: absolute;
+        transition: ease-out $fastDuration;
+        right: 1.8rem;
+    }
+
+    &.btn-tertiary:hover::after {
         right: 1.5rem;
     }
 }

@@ -3,6 +3,11 @@
     align-items: center;
     min-height: 400px;
     padding-top: $fixTopNavHeight;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    flex-basis: 100%;
 
     & h1 {
         text-shadow: 5px 5px 5px transparentize($darkColor, .85);

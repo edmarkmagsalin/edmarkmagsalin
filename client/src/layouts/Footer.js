@@ -7,7 +7,7 @@ export class Footer extends Component {
             <section className="bg-dark">
                 <div className="container">
                     <div className="d-flexCenter mx-auto">
-                        <Logo /> <h3 className="logo-label">Edmark Magsalin</h3>
+                        <Logo /> <a href="./"><h3 className="logo-label">Edmark Magsalin</h3></a>
                     </div>
                     <ul className="menu-row bottom-menu">
                         <li>

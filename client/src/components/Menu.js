@@ -4,7 +4,7 @@ export class Menu extends Component {
     render() {
         return (
             <Fragment>
-                <ul className="menu-row top-menu">
+                <ul className="menu-row top-menu" role="menubar">
                     <li>
                         <a href="#about">About</a>
                     </li>

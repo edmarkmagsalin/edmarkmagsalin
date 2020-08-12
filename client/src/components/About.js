@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import EM_3 from '../assets/images/EM_3.JPG'
 
 export class About extends Component {
     render() {
@@ -20,9 +21,7 @@ export class About extends Component {
                                 </p>
                             </div>
                             <div className="col-sm-12 col-md-5">
-                                <div className="mx picture-frame">
-                                    
-                                </div>
+                                <img src={EM_3} alt="Edmark Magsalin" className="mx picture-frame" />
                             </div>
                         </div>
                     </div>
