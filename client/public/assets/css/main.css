@@ -549,21 +549,30 @@ footer {
 }
 
 .carousel {
-  overflow: hidden;
-  padding-top: 1rem;
+  height: auto;
+  width: 100%;
+  border: 1px solid white;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  will-change: transform;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .carousel__item {
-  width: 100%;
-  margin-bottom: 2rem;
+  padding-right: 2rem;
+  height: calc(100% - 40px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.carousel__image {
-  width: 100%;
-  height: auto;
-  max-width: 560px;
-  border: 2px solid #707070;
-  border-radius: 1rem;
+.carousel > * {
+  white-space: break-spaces;
 }
 
 .cover {
@@ -943,6 +952,18 @@ ul.socials > li > a {
 
 ul.socials > li > a:hover {
   color: #3a678c;
+}
+
+.project {
+  width: 100%;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  max-width: 560px;
+  border: 2px solid #707070;
+  border-radius: 1rem;
 }
 
 blockquote {

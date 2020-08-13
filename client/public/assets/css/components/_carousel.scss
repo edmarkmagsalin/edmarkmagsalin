@@ -1,17 +1,26 @@
 .carousel {
-    overflow: hidden;
-    padding-top: 1rem;
+    height: auto;
+    width: 100%;
+    border: 1px solid white;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    will-change: transform;
+    position: relative;
+    background: rgba(255,255,255,0.1);
 
     &__item {
-        width: 100%;
-        margin-bottom: 2rem;
+        padding-right: 2rem;
+        height: calc(100% - 40px);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    &__image {
-        width: 100%;
-        height: auto;
-        max-width: 560px;
-        border: 2px solid $grayColor;
-        border-radius: 1rem;
+    & > * {
+        white-space: break-spaces;
     }
 }
