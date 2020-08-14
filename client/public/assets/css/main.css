@@ -549,30 +549,56 @@ footer {
 }
 
 .carousel {
-  height: auto;
+  position: relative;
+}
+
+.carousel__slider {
   width: 100%;
-  border: 1px solid white;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  height: auto;
+  overflow: hidden;
   white-space: nowrap;
   user-select: none;
-  cursor: pointer;
+  cursor: grab;
   transition: all 0.2s;
   will-change: transform;
   position: relative;
-  background: rgba(255, 255, 255, 0.1);
+}
+
+.carousel__slider.grabbing {
+  cursor: grabbing;
 }
 
 .carousel__item {
-  padding-right: 2rem;
   height: calc(100% - 40px);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  white-space: break-spaces;
 }
 
-.carousel > * {
-  white-space: break-spaces;
+.carousel__prev, .carousel__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: auto;
+  color: #3a678c;
+  cursor: pointer;
+  z-index: 98;
+  user-select: none;
+}
+
+.carousel__prev.disable, .carousel__next.disable {
+  opacity: .2;
+  color: #707070;
+}
+
+.carousel__prev {
+  left: 1rem;
+}
+
+.carousel__next {
+  right: 1rem;
 }
 
 .cover {
@@ -961,7 +987,7 @@ ul.socials > li > a:hover {
 .project img {
   width: 100%;
   height: auto;
-  max-width: 560px;
+  max-width: 460px;
   border: 2px solid #707070;
   border-radius: 1rem;
 }
@@ -1037,6 +1063,10 @@ section, nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+section > *, nav > * {
+  flex-basis: 100%;
 }
 
 a {

@@ -60,6 +60,9 @@ section, nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    & > * {
+        flex-basis: 100%;
+    }
 }
 
 a {
