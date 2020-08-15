@@ -11,6 +11,10 @@
         transition: all 0.2s;
         will-change: transform;
         position: relative;
+
+        @media (max-width: $md) {
+            overflow-x: scroll;
+        }
     }
 
     &__slider.grabbing {
@@ -35,6 +39,10 @@
         cursor: pointer;
         z-index: 98;
         user-select: none;
+        opacity: .9;
+        @media(max-width: $md) {
+            width: 25px;
+        }
     }
 
     &__prev.disable, &__next.disable {

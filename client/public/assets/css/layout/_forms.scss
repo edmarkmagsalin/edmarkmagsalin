@@ -3,13 +3,13 @@ form {
     max-width: 500px;
     margin: 0 auto;
     border-radius: 1rem;
-    padding: 1rem;
-    border: 1px solid var(--color);
+    padding: 2rem;
+    padding-top: 2.5rem;
+    border: 2px solid $primaryColor;
 
     & > * {
         display: block;
         width: 100%;
-        max-width: 350px;
         margin: 0 auto 1rem auto;
     }
 

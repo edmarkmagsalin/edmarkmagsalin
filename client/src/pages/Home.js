@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import About from '../components/About'
 import Projects from '../components/Projects'
+import Contact from '../components/Contact'
 
 export class Home extends Component {
     render() {
@@ -8,6 +9,7 @@ export class Home extends Component {
             <Fragment>
                 <About />
                 <Projects />
+                <Contact />
             </Fragment>
         )
     }

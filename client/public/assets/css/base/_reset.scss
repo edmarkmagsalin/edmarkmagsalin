@@ -30,6 +30,9 @@ h1 {
     font-size: 5rem;
     margin-top: 0;
     margin-bottom: 0;
+    @media (max-width: $md) {
+        font-size: 4rem;
+    }
 }
 
 h2 {
@@ -37,6 +40,9 @@ h2 {
     font-size: 3.5rem;
     margin-top: 0;
     margin-bottom: 0;
+    @media (max-width: $md) {
+        font-size: 3rem;
+    }
 }
 
 h3 {
@@ -84,8 +90,7 @@ a {
 }
 
 textarea {
-    min-height: 2rem;
-    min-width: 100%;
-    max-width: 350px;
+    height: 150px;
     font-family: inherit;
+    resize: none;
 }

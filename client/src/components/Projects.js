@@ -16,7 +16,7 @@ export class Projects extends Component {
         let entireSliderWidth;
 
         function determinePosition () {
-            if (slider.scrollLeft===0){
+            if (Math.round(slider.scrollLeft)===0){
                 prev.classList.add('disable');
             } else {
                 prev.classList.remove('disable');
@@ -24,7 +24,7 @@ export class Projects extends Component {
             
             entireSliderWidth = slider.clientWidth*(item.length-1);
 
-            if (slider.scrollLeft===entireSliderWidth){
+            if (Math.round(slider.scrollLeft)===entireSliderWidth){
                 next.classList.add('disable');
             } else {
                 next.classList.remove('disable');
@@ -32,8 +32,13 @@ export class Projects extends Component {
         }
 
         next.addEventListener('click', () => {
-            const remainder = slider.scrollLeft%slider.clientWidth;
-            slider.scrollLeft=slider.scrollLeft+slider.clientWidth-remainder;
+            const remainder = Math.round(slider.scrollLeft)%slider.clientWidth;
+
+            if(remainder === 0) {
+                slider.scrollLeft=slider.scrollLeft+slider.clientWidth;
+            } else {
+                slider.scrollLeft=slider.scrollLeft+slider.clientWidth-remainder;
+            }
             determinePosition();
         })
 
@@ -75,12 +80,16 @@ export class Projects extends Component {
             slider.classList.add('grabbing');
             determinePosition();
         });
+
+        slider.addEventListener('scroll', () => {
+            determinePosition();
+        });
     }
     render() {
         return (
             <Fragment>
-                <span className="anchor-point" id="projects">&nbsp;</span>
                 <section>
+                    <span className="anchor-point" id="projects">&nbsp;</span>
                     <div className="container mb-1">
                         <h2>Projects</h2>
                     </div>
@@ -141,7 +150,7 @@ export class Projects extends Component {
                                         <div className="col-sm-12 col-lg-7">
                                             <h3>MERN CRUD Bare Minimum</h3>
                                             <p className="lead">
-                                                This is application is a demonstration of Create, Read, Update and Delete (CRUD) using MERN stack. I also added account management using JSON Web Token. 
+                                                This application is a demonstration of Create, Read, Update and Delete or (also know as CRUD) using MERN stack. I also added account management using JSON Web Token for autorization.
                                             </p>
                                             <p>
                                                 Powered by: MongoDB, Express, React, Node.js
@@ -152,7 +161,6 @@ export class Projects extends Component {
                                         </div>
                                     </div>
                                 </div>
-
 
                             </div>
                             <div id="next" className="carousel__next">

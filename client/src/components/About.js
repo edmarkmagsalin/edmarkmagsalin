@@ -93,7 +93,7 @@ export class About extends Component {
                                 <div className="blurb">
                                     <div className="icon"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="adobe" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M315.5 64h170.9v384L315.5 64zm-119 0H25.6v384L196.5 64zM256 206.1L363.5 448h-73l-30.7-76.8h-78.7L256 206.1z"></path></svg></div>
                                     <h4>Adobe</h4>
-                                    <p>The product that I'm using in designing. I like Adobe products, specially Adobe Xd because I can use it even I'm offline. Sketch is also a great tool too for designing but it is currently available on Mac.</p>
+                                    <p>The product that I'm using in designing. I like Adobe products, specially Adobe Xd because I can use it even I'm offline. Sketch is also a great tool too for designing but it is currently available only on Mac.</p>
                                 </div>
                             </div>
                         </div>

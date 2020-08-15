@@ -49,6 +49,7 @@ ul.top-menu {
         color: $primaryColor;
         text-transform: uppercase;
         position: relative;
+        font-weight: bold;
         @media (max-width: $md) {
             margin-left: 0;
         }
