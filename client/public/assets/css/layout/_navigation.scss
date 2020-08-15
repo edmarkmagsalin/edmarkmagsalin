@@ -50,8 +50,19 @@ ul.top-menu {
         text-transform: uppercase;
         position: relative;
         font-weight: bold;
+        transition: transform $fastDuration ease-in-out;
         @media (max-width: $md) {
             margin-left: 0;
+            display: flex;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            padding: .3rem;
+        }
+    }
+    & > li > a:hover {
+        @media (max-width: $md) {
+            transform: scale(1.5);
         }
     }
 
@@ -70,6 +81,25 @@ ul.top-menu {
     }
     & > li > a:hover::after {
         width: 2rem;
+        @media (max-width: $md) {
+            width: 0;
+        }
+    }
+    & > li > a > span {
+        @media (max-width: $md) {
+            display: none;
+        }
+        @media (min-width: $md) {
+            display: inline-block;
+        }
+    }
+    & > li > a > svg {
+        @media (max-width: $md) {
+            width: 100%;
+        }
+        @media (min-width: $md) {
+            display: none;
+        }
     }
 }
 

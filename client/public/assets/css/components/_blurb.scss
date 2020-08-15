@@ -6,10 +6,18 @@
 
     & .icon {
         margin-right: 1rem;
+        @media(max-width: $sm) {
+            margin: 0 auto;
+            margin-bottom: .5rem;
+        }
     }
 
     & h4 {
         margin: 0;
+        @media(max-width: $sm) {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     & p {

@@ -4,7 +4,7 @@ import Logo from '../components/Logo'
 export class Footer extends Component {
     render() {
         return (
-            <section className="bg-dark">
+            <section>
                 <div className="container">
                     <div className="d-flexCenter mx-auto">
                         <Logo /> <a href="./"><h3 className="logo-label">Edmark Magsalin</h3></a>
