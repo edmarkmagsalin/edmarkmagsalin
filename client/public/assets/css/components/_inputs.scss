@@ -23,7 +23,6 @@ textarea
         outline: transparent;
         border: 2px solid $primaryColor;
         caret-color: $primaryColor;
-        background-color: transparentize($primaryColor, .8);
     }
 
     &.pass {
@@ -58,6 +57,7 @@ input[type=button] {
     font-size: 1rem;
     max-width: 100%;
     cursor: pointer;
+    font-family: inherit;
 
     &.btn-primary {
         background-color: $primaryColor;

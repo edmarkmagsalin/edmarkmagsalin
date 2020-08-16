@@ -110,55 +110,44 @@
     }
 }
 
-.hide {
+.hide, .sm-hide {
     display: none;
 }
 
-.sm-hide {
-    @media (max-width: $sm) {
-        display: none;
-    }
-}
-
 .md-hide {
-    @media (max-width: $md) {
+    @media (min-width: $md) {
         display: none;
     }
 }
 
 .lg-hide {
-    @media (max-width: $lg) {
+    @media (min-width: $lg) {
         display: none;
     }
 }
 
 .xl-hide {
-    @media (max-width: $xl) {
+    @media (min-width: $xl) {
         display: none;
     }
 }
 
 .w {
-    &-100 {
-        width: 100%;
-    }
-    &-sm-100 {
-        @media(max-width: $sm) {
+    &-100, &-sm-100 {
             width: 100%;
-        }
     }
     &-md-100 {
-        @media(max-width: $md) {
+        @media(min-width: $md) {
             width: 100%;
         }
     }
     &-lg-100 {
-        @media(max-width: $lg) {
+        @media(min-width: $lg) {
             width: 100%;
         }
     }
     &-xl-100 {
-        @media(max-width: $xl) {
+        @media(min-width: $xl) {
             width: 100%;
         }
     }
@@ -175,26 +164,21 @@
 
 // alignment
 .t {
-    &-center {
+    &-center, &-sm-center {
         text-align: center;
     }
-    &-sm-center {
-        @media(max-width: $sm) {
-            text-align: center;
-        }
-    }
     &-md-center {
-        @media(max-width: $md) {
+        @media(min-width: $md) {
             text-align: center;
         }
     }
     &-lg-center {
-        @media(max-width: $lg) {
+        @media(min-width: $lg) {
             text-align: center;
         }
     }
     &-xl-center {
-        @media(max-width: $xl) {
+        @media(min-width: $xl) {
             text-align: center;
         }
     }
@@ -208,20 +192,13 @@
 
 // spacing and alignment
 .m {
-    &x {
+    &x, &-sm-x {
         margin-left: auto;
         margin-right: auto;
     }
     
-    &-sm-x {
-        @media(max-width: $sm) {
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
-    
     &-md-x {
-        @media(max-width: $md) {
+        @media(min-width: $md) {
             margin-left: auto;
             margin-right: auto;
         }

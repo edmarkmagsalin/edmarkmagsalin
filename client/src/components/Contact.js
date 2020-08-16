@@ -82,7 +82,7 @@ export class Contact extends Component {
         });
 
         requiredFields.forEach(requiredField => {
-            requiredField.addEventListener('input', () => {
+            requiredField.addEventListener('blur', () => {
                 validateNullField(requiredField);
             });
         });

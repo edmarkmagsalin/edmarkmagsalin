@@ -6,7 +6,7 @@ import MERNCRUD from '../assets/images/thumbnails/mern-crud-bare-minimum.png'
 export class Projects extends Component {
     componentDidMount() {
         const slider = document.querySelector('.carousel__slider');
-        const item = document.querySelectorAll('.carousel__item');
+        const items = document.querySelectorAll('.carousel__item');
         const prev = document.querySelector('#prev');
         const next = document.querySelector('#next');
         
@@ -14,7 +14,7 @@ export class Projects extends Component {
         let startX;
         let scrollLeft;
         let entireSliderWidth;
-
+        
         function determinePosition () {
             if (Math.round(slider.scrollLeft)===0){
                 prev.classList.add('disable');
@@ -22,7 +22,7 @@ export class Projects extends Component {
                 prev.classList.remove('disable');
             }
             
-            entireSliderWidth = slider.clientWidth*(item.length-1);
+            entireSliderWidth = slider.clientWidth*(items.length-1);
 
             if (Math.round(slider.scrollLeft)===entireSliderWidth){
                 next.classList.add('disable');
@@ -31,25 +31,23 @@ export class Projects extends Component {
             }
         }
 
-        next.addEventListener('click', () => {
-            const remainder = Math.round(slider.scrollLeft)%slider.clientWidth;
-
-            if(remainder === 0) {
-                slider.scrollLeft=slider.scrollLeft+slider.clientWidth;
-            } else {
-                slider.scrollLeft=slider.scrollLeft+slider.clientWidth-remainder;
-            }
-            determinePosition();
-        })
-
         prev.addEventListener('click', () => {
             const remainder = slider.scrollLeft%slider.clientWidth; // residue
-
             
             if (remainder === 0){
                 slider.scrollLeft=slider.scrollLeft-slider.clientWidth;
             } else {
                 slider.scrollLeft=slider.scrollLeft-remainder;
+            }
+            determinePosition();
+        })
+
+        next.addEventListener('click', () => {
+            const remainder = Math.round(slider.scrollLeft)%slider.clientWidth;
+            if(remainder === 0) {
+                slider.scrollLeft=slider.scrollLeft+slider.clientWidth;
+            } else {
+                slider.scrollLeft=slider.scrollLeft+slider.clientWidth-remainder;
             }
             determinePosition();
         })
@@ -92,6 +90,7 @@ export class Projects extends Component {
                     <span className="anchor-point" id="projects">&nbsp;</span>
                     <div className="container mb-1">
                         <h2>Projects</h2>
+                        <p>Here are some of my projects that I'm proud of. These projects focuses on using modern web technologies like <strong>Node.js</strong>, <strong>React</strong>, <strong>Express</strong>, and <strong>MongoDB</strong>.</p>
                     </div>
                     <div className="container-fluid">
                         <div className="carousel">
@@ -150,7 +149,7 @@ export class Projects extends Component {
                                         <div className="col-sm-12 col-lg-7">
                                             <h3>MERN CRUD Bare Minimum</h3>
                                             <p className="lead">
-                                                This application is a demonstration of Create, Read, Update and Delete or (also know as CRUD) using MERN stack. I also added account management using JSON Web Token for autorization.
+                                                This application is a demonstration of Create, Read, Update and Delete or (also know as <strong>CRUD</strong>) using <strong>MERN</strong> stack. I also added account management using <strong>JSON Web Tokens</strong> for authorization.
                                             </p>
                                             <p>
                                                 Powered by: MongoDB, Express, React, Node.js

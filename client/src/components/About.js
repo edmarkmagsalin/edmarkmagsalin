@@ -5,8 +5,8 @@ export class About extends Component {
     render() {
         return (
             <Fragment>
-                <span className="anchor-point" id="about">&nbsp;</span>
                 <section>
+                    <span className="anchor-point" id="about">&nbsp;</span>
                     <div className="container">
                         <div className="row">
                             <div className="col-sm-12 col-md-7">

@@ -10,7 +10,6 @@ import Footer from './layouts/Footer'
 import Home from './pages/Home'
 import Test from './pages/Test'
 import NotFound from './pages/NotFound'
-
 function App() {
   return (
     <Router>
