@@ -11,9 +11,11 @@ $darkColor: lighten(#000000, 15);
 $grayColor: #707070;
 $lightColor: darken(#FFFFFF, 0);
 
+$slowestDuration: 2s;
 $slowDuration: 1s;
 $normalDuration: .5s;
-$fastDuration: .25s;
+$fastDuration: .3s;
+$fastestDuration: .2s;
 
 $fixTopNavHeight: 80px;
 $fixBottomNavHeight: 60px;

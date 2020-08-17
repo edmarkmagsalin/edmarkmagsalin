@@ -64,12 +64,6 @@ nav.top-nav > div {
 }
 
 @media (max-width: 768px) {
-  .toggler:checked + ul.top-menu {
-    width: 200px;
-  }
-}
-
-@media (max-width: 768px) {
   ul.top-menu {
     background-color: var(--backgroundColor);
     position: absolute;
@@ -80,8 +74,18 @@ nav.top-nav > div {
     height: 100vh;
     box-shadow: -5px 5px 10px 0px;
     align-items: flex-end;
+    visibility: hidden;
     width: 0;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out, opacity 1s ease-in-out;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .toggler:checked + ul.top-menu {
+    width: 200px;
+    opacity: 1;
+    visibility: visible;
   }
 }
 
@@ -92,7 +96,7 @@ ul.top-menu > li > a {
   text-transform: uppercase;
   position: relative;
   font-weight: bold;
-  transition: transform 0.25s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 @media (max-width: 768px) {
@@ -126,7 +130,7 @@ ul.top-menu > li > a::after {
   width: 0;
   height: .2rem;
   background-color: transparent;
-  transition: all ease-out 0.25s;
+  transition: all ease-out 0.3s;
 }
 
 ul.top-menu > li > a:hover::after, ul.top-menu > li > a.active::after {
@@ -726,7 +730,7 @@ video {
   content: "";
   position: absolute;
   height: 100%;
-  transition: left 0.25s ease-in;
+  transition: left 0.3s ease-in;
 }
 
 .toggles [type=checkbox] + label::before {
@@ -785,7 +789,7 @@ textarea {
   background-color: transparent;
   color: var(--color);
   border: 2px solid #3a678c;
-  transition: border 0.25s ease-in-out;
+  transition: border 0.3s ease-in-out;
 }
 
 input[type=text]:focus,
@@ -877,7 +881,7 @@ input[type=reset].btn-primary::after,
 input[type=button].btn-primary::after {
   content: '>';
   position: absolute;
-  transition: ease-out 0.25s;
+  transition: ease-out 0.3s;
   right: 1.8rem;
 }
 
@@ -915,7 +919,7 @@ input[type=reset].btn-secondary::after,
 input[type=button].btn-secondary::after {
   content: '>';
   position: absolute;
-  transition: ease-out 0.25s;
+  transition: ease-out 0.3s;
   right: 1.8rem;
 }
 
@@ -947,7 +951,7 @@ input[type=reset].btn-tertiary::after,
 input[type=button].btn-tertiary::after {
   content: '>';
   position: absolute;
-  transition: ease-out 0.25s;
+  transition: ease-out 0.3s;
   right: 1.8rem;
 }
 
@@ -975,7 +979,7 @@ input[type=radio] {
   font-size: .6rem;
   opacity: 1;
   cursor: default;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .labeled-input > input[type=text].place-label + label,
@@ -991,8 +995,8 @@ input[type=radio] {
 
 .icon {
   background-color: #3a678c;
-  width: 4rem;
-  height: 4rem;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   position: relative;
   display: inline-block;
@@ -1000,8 +1004,9 @@ input[type=radio] {
 
 .icon > svg {
   color: white;
-  font-size: 2.5rem;
   position: absolute;
+  width: 60px;
+  height: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1110,7 +1115,7 @@ body {
   flex-direction: column;
   color: var(--color);
   background-color: var(--backgroundColor);
-  transition: all 0.25s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 body > div {

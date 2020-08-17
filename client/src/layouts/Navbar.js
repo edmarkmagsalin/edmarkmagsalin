@@ -31,7 +31,7 @@ export class Navbar extends Component {
     }
     render() {
         return (
-            <nav className="top-nav bg-blur">
+            <nav className="top-nav bg-light-overlay bg-blur">
                 <div className="container">
                     <Logo />
                     <Menu />
