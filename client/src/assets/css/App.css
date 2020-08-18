@@ -684,6 +684,12 @@ footer {
   background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../../assets/images/desktop-banner.jpg");
 }
 
+@media (max-width: 768px) {
+  .cover {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../../assets/images/mobile-banner.jpg");
+  }
+}
+
 .cover h1 {
   text-shadow: 5px 5px 5px rgba(38, 38, 38, 0.15);
 }
