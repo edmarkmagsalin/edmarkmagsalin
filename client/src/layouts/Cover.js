@@ -1,11 +1,10 @@
 import React, { Component, Fragment } from 'react'
-import EM_1 from '../assets/images/EM_1.JPG'
 
 export class Banner extends Component {
     render() {
         return (
             <Fragment>
-                <section className="bg-transparent cover" style={{backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(${EM_1})`}}>
+                <section className="bg-transparent cover pb-0">
                     <div className="container">
                         <h1>Edmark Magsalin.</h1>
                         <p>Web developer/designer</p>

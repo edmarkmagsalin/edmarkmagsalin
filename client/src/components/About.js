@@ -21,17 +21,10 @@ export class About extends Component {
                                 </p>
                             </div>
                             <div className="col-sm-12 col-md-5">
-                                <img src={EM_3} alt="Edmark Magsalin" className="mx picture-frame" />
+                                <img src={EM_3} alt="Edmark Magsalin" className="picture-frame" />
                             </div>
                         </div>
-                    </div>
-
-                    <div className="container my-2">
-                        <h3 className="color-primary">Some of the web technologies and tools that I trust using</h3>
-                    </div>
-
-                    
-                    <div className="container">
+                        <h3 className="color-primary my-2">Some of the web technologies and tools that I trust using</h3>
                         <div className="row">
                             <div className="col-sm-12 col-md-6 col-lg-4">
                                 <div className="blurb">

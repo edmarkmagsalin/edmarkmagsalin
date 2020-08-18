@@ -681,6 +681,7 @@ footer {
   background-attachment: fixed;
   background-position: center;
   flex-basis: 100%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../../assets/images/desktop-banner.jpg");
 }
 
 .cover h1 {
@@ -697,19 +698,12 @@ footer {
   display: inline-block;
 }
 
-video {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translate(-50%, -50%);
-  background: url("../../assets/images/bg.jpg") no-repeat;
-  background-size: cover;
-  background-color: rgba(38, 38, 38, 0.5);
-  z-index: -100;
+.cover .wave {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
 }
 
 .toggles [type=checkbox] {
@@ -770,6 +764,8 @@ video {
   height: auto;
   background-color: #3a678c;
   border-radius: 130px;
+  display: block;
+  margin: 0 auto;
 }
 
 input[type=text],
@@ -995,17 +991,25 @@ input[type=radio] {
 
 .icon {
   background-color: #3a678c;
-  width: 100px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   position: relative;
   display: inline-block;
+  margin-right: 1rem;
+}
+
+@media (max-width: 576px) {
+  .icon {
+    margin: 0 auto;
+    margin-bottom: .5rem;
+  }
 }
 
 .icon > svg {
   color: white;
   position: absolute;
-  width: 60px;
+  width: 20px;
   height: auto;
   top: 50%;
   left: 50%;
@@ -1017,17 +1021,6 @@ input[type=radio] {
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 1rem;
-}
-
-.blurb .icon {
-  margin-right: 1rem;
-}
-
-@media (max-width: 576px) {
-  .blurb .icon {
-    margin: 0 auto;
-    margin-bottom: .5rem;
-  }
 }
 
 .blurb h4 {
@@ -1339,7 +1332,7 @@ textarea {
 }
 
 .bg-img1-overlay {
-  background: linear-gradient(rgba(58, 103, 140, 0.8), rgba(58, 103, 140, 0.8)), url("../../assets/images/img1.jpg");
+  background: linear-gradient(rgba(58, 103, 140, 0.8), rgba(58, 103, 140, 0.8));
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1521,6 +1514,10 @@ textarea {
   margin: 4rem;
 }
 
+.mt-0 {
+  margin-top: 0;
+}
+
 .mt-1 {
   margin-top: 1rem;
 }
@@ -1535,6 +1532,10 @@ textarea {
 
 .mt-4 {
   margin-top: 4rem;
+}
+
+.mr-0 {
+  margin-right: 0;
 }
 
 .mr-1 {
@@ -1553,6 +1554,10 @@ textarea {
   margin-right: 4rem;
 }
 
+.mb-0 {
+  margin-bottom: 0;
+}
+
 .mb-1 {
   margin-bottom: 1rem;
 }
@@ -1567,6 +1572,10 @@ textarea {
 
 .mb-4 {
   margin-bottom: 4rem;
+}
+
+.ml-0 {
+  margin-left: 0;
 }
 
 .ml-1 {
@@ -1655,6 +1664,10 @@ textarea {
   padding: 4rem;
 }
 
+.pt-0 {
+  padding-top: 0;
+}
+
 .pt-1 {
   padding-top: 1rem;
 }
@@ -1669,6 +1682,10 @@ textarea {
 
 .pt-4 {
   padding-top: 4rem;
+}
+
+.pr-0 {
+  padding-right: 0;
 }
 
 .pr-1 {
@@ -1687,6 +1704,10 @@ textarea {
   padding-right: 4rem;
 }
 
+.pb-0 {
+  padding-bottom: 0;
+}
+
 .pb-1 {
   padding-bottom: 1rem;
 }
@@ -1701,6 +1722,10 @@ textarea {
 
 .pb-4 {
   padding-bottom: 4rem;
+}
+
+.pl-0 {
+  padding-left: 0;
 }
 
 .pl-1 {
@@ -1718,4 +1743,4 @@ textarea {
 .pl-4 {
   padding-left: 4rem;
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=App.css.map */

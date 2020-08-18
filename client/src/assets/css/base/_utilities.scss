@@ -102,8 +102,7 @@
     }
 
     &-img1-overlay {
-        background: linear-gradient(transparentize($primaryColor, .2), transparentize($primaryColor, .2)),
-                    url('../../assets/images/img1.jpg');
+        background: linear-gradient(transparentize($primaryColor, .2), transparentize($primaryColor, .2));
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
@@ -279,6 +278,10 @@
         margin: 4rem;
     }
     
+    &t-0 {
+        margin-top: 0;
+    }
+    
     &t-1 {
         margin-top: 1rem;
     }
@@ -290,6 +293,10 @@
     }
     &t-4 {
         margin-top: 4rem;
+    }
+
+    &r-0 {
+        margin-right: 0;
     }
 
     &r-1 {
@@ -305,6 +312,10 @@
         margin-right: 4rem;
     }
 
+    &b-0 {
+        margin-bottom: 0;
+    }
+
     &b-1 {
         margin-bottom: 1rem;
     }
@@ -316,6 +327,10 @@
     }
     &b-4 {
         margin-bottom: 4rem;
+    }
+
+    &l-0 {
+        margin-left: 0;
     }
 
     &l-1 {
@@ -400,6 +415,10 @@
         padding: 4rem;
     }
     
+    &t-0 {
+        padding-top: 0;
+    }
+    
     &t-1 {
         padding-top: 1rem;
     }
@@ -411,6 +430,10 @@
     }
     &t-4 {
         padding-top: 4rem;
+    }
+
+    &r-0 {
+        padding-right: 0;
     }
 
     &r-1 {
@@ -426,6 +449,10 @@
         padding-right: 4rem;
     }
 
+    &b-0 {
+        padding-bottom: 0;
+    }
+
     &b-1 {
         padding-bottom: 1rem;
     }
@@ -437,6 +464,10 @@
     }
     &b-4 {
         padding-bottom: 4rem;
+    }
+
+    &l-0 {
+        padding-left: 0;
     }
 
     &l-1 {

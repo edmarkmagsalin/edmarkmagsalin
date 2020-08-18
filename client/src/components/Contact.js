@@ -110,7 +110,7 @@ export class Contact extends Component {
                                         <label htmlFor="message">Message</label>
                                     </div>
                                     <div>
-                                        <button className="btn-primary">Submit</button>
+                                        <button className="btn-primary test">Submit</button>
                                     </div>
                                 </form>
                             </div>
