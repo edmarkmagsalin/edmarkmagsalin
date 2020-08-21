@@ -27,6 +27,7 @@
         align-items: center;
         justify-content: center;
         white-space: break-spaces;
+        transition: all $fastDuration ease-out;
     }
 
     &__prev, &__next {

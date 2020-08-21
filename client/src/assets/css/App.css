@@ -642,6 +642,7 @@ footer {
   align-items: center;
   justify-content: center;
   white-space: break-spaces;
+  transition: all 0.3s ease-out;
 }
 
 .carousel__prev, .carousel__next {
@@ -1101,6 +1102,7 @@ blockquote {
   background-color: rgba(58, 103, 140, 0.2);
 }
 
+/* RESET : BEGIN */
 * {
   box-sizing: border-box;
 }
@@ -1208,6 +1210,7 @@ textarea {
   resize: none;
 }
 
+/* RESET : END */
 .lead {
   font-size: 1.5rem;
 }
@@ -1236,6 +1239,7 @@ textarea {
   transform: translateX(100px);
 }
 
+/* UTILITIES : BEGIN */
 .container {
   width: 100%;
   max-width: 1366px;
@@ -1754,4 +1758,6 @@ textarea {
 .pl-4 {
   padding-left: 4rem;
 }
+
+/* UTILITIES : END */
 /*# sourceMappingURL=App.css.map */

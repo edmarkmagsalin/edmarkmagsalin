@@ -24,7 +24,7 @@ export class About extends Component {
                                 <img src={EM_3} alt="Edmark Magsalin" className="picture-frame" />
                             </div>
                         </div>
-                        <h3 className="color-primary my-2">Some of the web technologies and tools that I trust using</h3>
+                        <h3 className="color-primary my-2 t-center">Some of the web technologies and tools that I trust using</h3>
                         <div className="row">
                             <div className="col-sm-12 col-md-6 col-lg-4">
                                 <div className="blurb">

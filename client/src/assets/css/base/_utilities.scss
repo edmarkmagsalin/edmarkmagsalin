@@ -1,3 +1,4 @@
+ /* UTILITIES : BEGIN */
 .container {
     width: 100%;
     max-width: 1366px;
@@ -14,10 +15,10 @@
         margin-left: 3rem;
         margin-right: 3rem;
     }
-}
 
-.container-fluid {
-    width: 100%;
+    &-fluid {
+        width: 100%;
+    }
 }
 
 .anchor-point {
@@ -483,3 +484,4 @@
         padding-left: 4rem;
     }
 }
+ /* UTILITIES : END */
