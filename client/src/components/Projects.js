@@ -6,81 +6,61 @@ import MERNCRUD from '../assets/images/thumbnails/mern-crud-bare-minimum.png'
 export class Projects extends Component {
     componentDidMount() {
         const slider = document.querySelector('.carousel__slider');
-        const items = document.querySelectorAll('.carousel__item');
-        const prev = document.querySelector('#prev');
-        const next = document.querySelector('#next');
-        
-        let isDown = false;
-        let startX;
-        let scrollLeft;
-        let entireSliderWidth;
-        
-        function determinePosition () {
-            if (Math.round(slider.scrollLeft)===0){
-                prev.classList.add('disable');
+        const prevButton = document.querySelector('#prev');
+        const nextButton = document.querySelector('#next');
+        const carouselItems = document.querySelectorAll('.carousel__item');
+        let currentSlide = 0;
+
+        function determineButtonStyle() {
+            // if in the starting position
+            if(currentSlide === 0) {
+                prevButton.classList.add('disable');
             } else {
-                prev.classList.remove('disable');
+                prevButton.classList.remove('disable');
             }
             
-            entireSliderWidth = slider.clientWidth*(items.length-1);
-
-            if (Math.round(slider.scrollLeft)===entireSliderWidth){
-                next.classList.add('disable');
+            // if the end position is reach
+            if(currentSlide === carouselItems.length-1) {
+                nextButton.classList.add('disable');
             } else {
-                next.classList.remove('disable');
+                nextButton.classList.remove('disable');
             }
         }
 
-        prev.addEventListener('click', () => {
-            const remainder = slider.scrollLeft%slider.clientWidth; // residue
-            
-            if (remainder === 0){
-                slider.scrollLeft=slider.scrollLeft-slider.clientWidth;
+        prevButton.addEventListener('click', () => {
+            if(currentSlide === 0) {return}
+
+            let moveWidth;
+            if(currentSlide <= 1) {
+                moveWidth = 0;
+                --currentSlide;
             } else {
-                slider.scrollLeft=slider.scrollLeft-remainder;
+                moveWidth = ((currentSlide-2)*(slider.clientWidth*.8))+(slider.clientWidth*.7);
+                --currentSlide;
             }
-            determinePosition();
-        })
 
-        next.addEventListener('click', () => {
-            const remainder = Math.round(slider.scrollLeft)%slider.clientWidth;
-            if(remainder === 0) {
-                slider.scrollLeft=slider.scrollLeft+slider.clientWidth;
+            carouselItems.forEach(carouselItem => {
+                carouselItem.style.transform = `translateX(-${moveWidth}px)`;
+            });
+            determineButtonStyle();
+        });
+
+        nextButton.addEventListener('click', () => {
+            if(currentSlide === carouselItems.length-1) {return}
+
+            let moveWidth;
+            if(currentSlide === 0) {
+                moveWidth = slider.clientWidth*.7;
+                ++currentSlide;
             } else {
-                slider.scrollLeft=slider.scrollLeft+slider.clientWidth-remainder;
+                moveWidth = (currentSlide*slider.clientWidth*.8)+(slider.clientWidth*.7);
+                ++currentSlide;
             }
-            determinePosition();
-        })
 
-        slider.addEventListener('mousedown', (e) => {
-            isDown = true; // initialized moement
-            startX = e.pageX - slider.offsetLeft; // assign starting point for dragging
-            scrollLeft = slider.scrollLeft; // determine how far the item/s is scrolled to the left
-            slider.classList.add('grabbing');
-        });
-
-        slider.addEventListener('mouseleave', () => {
-            isDown = false; // assign false for stopping the movement
-            slider.classList.remove('grabbing');
-        });
-
-        slider.addEventListener('mouseup', () => {
-            isDown = false; // assign false for stopping the movement
-            slider.classList.remove('grabbing');
-        });
-
-        slider.addEventListener('mousemove', (e) => {
-            if (!isDown) return;  // stop the fn from running
-            e.preventDefault();
-            const x = e.pageX - slider.offsetLeft;
-            const walk = (x - startX) * 2;
-            slider.scrollLeft = scrollLeft - walk;
-            slider.classList.add('grabbing');
-            determinePosition();
-        });
-
-        slider.addEventListener('scroll', () => {
-            determinePosition();
+            carouselItems.forEach(carouselItem => {
+                carouselItem.style.transform = `translateX(-${moveWidth}px)`;
+            });
+            determineButtonStyle();
         });
     }
     render() {
@@ -88,11 +68,9 @@ export class Projects extends Component {
             <Fragment>
                 <section>
                     <span className="anchor-point" id="projects">&nbsp;</span>
-                    <div className="container mb-1">
+                    <div className="container">
                         <h2>Projects</h2>
                         <p>Here are some of my projects that I'm proud of. These projects focuses on using modern web technologies like <strong>Node.js</strong>, <strong>React</strong>, <strong>Express</strong>, and <strong>MongoDB</strong>.</p>
-                    </div>
-                    <div className="container-fluid">
                         <div className="carousel">
                             
                             <div id="prev" className="carousel__prev disable">
@@ -102,7 +80,7 @@ export class Projects extends Component {
                             <div className="carousel__slider">
 
                                 <div className="carousel__item">
-                                    <div className="container project row">
+                                    <div className="project row">
                                         <div className="col-sm-12 col-lg-5 pb-1">
                                             <img src={contactKeeper} alt="Contact Keeper" />
                                         </div>
@@ -122,7 +100,7 @@ export class Projects extends Component {
                                 </div>
 
                                 <div className="carousel__item">
-                                    <div className="container project row">
+                                    <div className="project row">
                                         <div className="col-sm-12 col-lg-5 pb-1">
                                             <img src={githubFinder} alt="GitHub User Finder" />
                                         </div>
@@ -142,7 +120,7 @@ export class Projects extends Component {
                                 </div>
 
                                 <div className="carousel__item">
-                                    <div className="container project row">
+                                    <div className="project row">
                                         <div className="col-sm-12 col-lg-5 pb-1">
                                             <img src={MERNCRUD} alt="MERN CRUD Bare Minimum" />
                                         </div>

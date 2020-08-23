@@ -6,6 +6,7 @@ export class Navbar extends Component {
 
 
     componentDidMount() {
+        const topNav = document.querySelector('.top-nav');
         const sections = document.querySelectorAll('.anchor-point');
         const sectionLinks = document.querySelectorAll('.top-menu a');
         function determineActiveSection () {
@@ -13,7 +14,7 @@ export class Navbar extends Component {
                 sectionLinks.forEach(sectionLink => {
                     // offsetTop is the distance of an element from the top of the window
                     // pageYOffset is the distance a user scrolled from the top of the window
-                    if(section.offsetTop < window.pageYOffset+80) {
+                    if(section.offsetTop < window.pageYOffset+topNav.clientHeight) {
                         if(sectionLink.getAttribute('href').slice(1) === section.getAttribute('id')){
                             sectionLink.classList.add('active');
                         } else {
@@ -26,12 +27,18 @@ export class Navbar extends Component {
                     }
                 });
             });
+
+            if(window.pageYOffset <= topNav.clientHeight) {
+                topNav.classList.remove('bg-light-overlay')
+            } else {
+                topNav.classList.add('bg-light-overlay')
+            }
         }
         window.addEventListener('scroll', determineActiveSection);
     }
     render() {
         return (
-            <nav className="top-nav bg-light-overlay bg-blur">
+            <nav className="top-nav bg-blur">
                 <div className="container">
                     <Logo />
                     <Menu />

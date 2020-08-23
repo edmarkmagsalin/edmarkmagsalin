@@ -1,12 +1,11 @@
 .project {
     width: 100%;
-
+    
     & img {
         width: 100%;
         height: auto;
         max-width: 460px;
-        border: 2px solid $grayColor;
-        border-radius: 1rem;
+        box-shadow: 5px 5px 5px;
         @media(max-width: $md) {
             display: block;
             margin: 0 auto;
