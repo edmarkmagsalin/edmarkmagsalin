@@ -612,8 +612,6 @@ footer {
 }
 
 .carousel {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
   position: relative;
 }
 
@@ -633,6 +631,8 @@ footer {
   white-space: normal;
   transition: all .4s ease-out;
   min-width: 80%;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
 }
 
 .carousel__prev, .carousel__next {
@@ -646,6 +646,12 @@ footer {
   z-index: 98;
   user-select: none;
   opacity: .9;
+}
+
+@media (max-width: 768px) {
+  .carousel__prev, .carousel__next {
+    width: 25px;
+  }
 }
 
 .carousel__prev.disable, .carousel__next.disable {
@@ -671,12 +677,12 @@ footer {
   background-attachment: fixed;
   background-position: center;
   flex-basis: 100%;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../../assets/images/desktop-banner.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../../assets/images/desktop-banner.webp");
 }
 
 @media (max-width: 768px) {
   .cover {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../../assets/images/mobile-banner.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../../assets/images/mobile-banner.webp");
   }
 }
 
@@ -1051,14 +1057,18 @@ ul.socials > li > a:hover {
 }
 
 .project {
-  width: 100%;
+  width: 95%;
+  color: white;
+  padding: 2rem 1rem;
+  box-shadow: 5px 5px 5px #707070;
+  background: linear-gradient(45deg, #3a678c, rgba(112, 112, 112, 0.25));
 }
 
 .project img {
   width: 100%;
   height: auto;
   max-width: 460px;
-  box-shadow: 5px 5px 5px;
+  border: 2px solid #ecdc1d;
 }
 
 @media (max-width: 768px) {

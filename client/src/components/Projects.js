@@ -71,6 +71,8 @@ export class Projects extends Component {
                     <div className="container">
                         <h2>Projects</h2>
                         <p>Here are some of my projects that I'm proud of. These projects focuses on using modern web technologies like <strong>Node.js</strong>, <strong>React</strong>, <strong>Express</strong>, and <strong>MongoDB</strong>.</p>
+                    </div>
+                    <div className="container">
                         <div className="carousel">
                             
                             <div id="prev" className="carousel__prev disable">
@@ -80,61 +82,67 @@ export class Projects extends Component {
                             <div className="carousel__slider">
 
                                 <div className="carousel__item">
-                                    <div className="project row">
-                                        <div className="col-sm-12 col-lg-5 pb-1">
-                                            <img src={contactKeeper} alt="Contact Keeper" />
-                                        </div>
-                                        <div className="col-sm-12 col-lg-7">
-                                            <h3>Contact Keeper</h3>
-                                            <p className="lead">
-                                                You can organize your personal and professional contacts using this application. This project is part of the course <strong>React Front To Back</strong> that is created by Brad Traversy.
-                                            </p>
-                                            <p>
-                                                Powered by: MongoDB, Express, React, Node.js
-                                            </p>
-                                            <p>
-                                                <a href="https://edmarkmagsalin-contact-keeper.herokuapp.com/" target="_blank" rel="noopener noreferrer" className="btn btn-tertiary">Visit this project</a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="carousel__item">
-                                    <div className="project row">
-                                        <div className="col-sm-12 col-lg-5 pb-1">
-                                            <img src={githubFinder} alt="GitHub User Finder" />
-                                        </div>
-                                        <div className="col-sm-12 col-lg-7">
-                                            <h3>Github User Finder</h3>
-                                            <p className="lead">
-                                                This application lets you search Github users using the Github API. This project is part of the course <strong>React Front To Back</strong> that is created by Brad Traversy.
-                                            </p>
-                                            <p>
-                                                Powered by: Node.js, Express, React
-                                            </p>
-                                            <p>
-                                                <a href="https://edmarkmagsalin-github-user-finder.netlify.app/" target="_blank" rel="noopener noreferrer" className="btn btn-tertiary">Visit this project</a>
-                                            </p>
+                                    <div className="project">
+                                        <div className="row">
+                                            <div className="col-sm-12 col-lg-5 pb-1">
+                                                <img src={contactKeeper} alt="Contact Keeper" />
+                                            </div>
+                                            <div className="col-sm-12 col-lg-7">
+                                                <h4>Contact Keeper</h4>
+                                                <p className="lead">
+                                                    You can organize your personal and professional contacts using this application. This project is part of the course <strong>React Front To Back</strong> that is created by Brad Traversy.
+                                                </p>
+                                                <p>
+                                                    Powered by: MongoDB, Express, React, Node.js
+                                                </p>
+                                                <p>
+                                                    <a href="https://edmarkmagsalin-contact-keeper.herokuapp.com/" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">Visit this project</a>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div className="carousel__item">
-                                    <div className="project row">
-                                        <div className="col-sm-12 col-lg-5 pb-1">
-                                            <img src={MERNCRUD} alt="MERN CRUD Bare Minimum" />
+                                    <div className="project">
+                                        <div className="row">
+                                            <div className="col-sm-12 col-lg-5 pb-1">
+                                                <img src={githubFinder} alt="GitHub User Finder" />
+                                            </div>
+                                            <div className="col-sm-12 col-lg-7">
+                                                <h4>Github User Finder</h4>
+                                                <p className="lead">
+                                                    This application lets you search Github users using the Github API. This project is part of the course <strong>React Front To Back</strong> that is created by Brad Traversy.
+                                                </p>
+                                                <p>
+                                                    Powered by: Node.js, Express, React
+                                                </p>
+                                                <p>
+                                                    <a href="https://edmarkmagsalin-github-user-finder.netlify.app/" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">Visit this project</a>
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div className="col-sm-12 col-lg-7">
-                                            <h3>MERN CRUD Bare Minimum</h3>
-                                            <p className="lead">
-                                                This application is a demonstration of Create, Read, Update and Delete or (also know as <strong>CRUD</strong>) using <strong>MERN</strong> stack. I also added account management using <strong>JSON Web Tokens</strong> for authorization.
-                                            </p>
-                                            <p>
-                                                Powered by: MongoDB, Express, React, Node.js
-                                            </p>
-                                            <p>
-                                                <a href="https://mern-crud-bare-minimum.herokuapp.com/" target="_blank" rel="noopener noreferrer" className="btn btn-tertiary">Visit this project</a>
-                                            </p>
+                                    </div>
+                                </div>
+
+                                <div className="carousel__item">
+                                    <div className="project">
+                                        <div className="row">
+                                            <div className="col-sm-12 col-lg-5 pb-1">
+                                                <img src={MERNCRUD} alt="MERN CRUD Bare Minimum" />
+                                            </div>
+                                            <div className="col-sm-12 col-lg-7">
+                                                <h4>MERN CRUD Bare Minimum</h4>
+                                                <p className="lead">
+                                                    This is a demon of Create, Read, Update and Delete (CRUD) using <strong>MERN</strong> stack. I also added account management using <strong>JSON Web Tokens</strong> for authorization.
+                                                </p>
+                                                <p>
+                                                    Powered by: MongoDB, Express, React, Node.js
+                                                </p>
+                                                <p>
+                                                    <a href="https://mern-crud-bare-minimum.herokuapp.com/" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">Visit this project</a>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

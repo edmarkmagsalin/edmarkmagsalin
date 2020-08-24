@@ -1,6 +1,4 @@
 .carousel {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
     position: relative;
   
     &__slider {
@@ -19,6 +17,8 @@
       white-space: normal;
       transition: all .4s ease-out;
       min-width: 80%;
+      padding-top: .5rem;
+      padding-bottom: .5rem;
     }
   
     &__prev, &__next {
@@ -32,6 +32,9 @@
       z-index: 98;
       user-select: none;
       opacity: .9;
+      @media (max-width: $md) {
+        width: 25px;
+      }
     }
   
     &__prev.disable, &__next.disable {
