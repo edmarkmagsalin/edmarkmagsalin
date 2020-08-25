@@ -65,9 +65,22 @@ ul.top-menu {
     
     .toggler:checked + & {
         @media (max-width: $md) {
-            width: 200px;
+            width: 100%;
             opacity: 1;
             visibility: visible;
+            background-color: transparentize($darkColor, .2);
+        }
+    }
+    
+    .toggler:checked + &::before {
+        @media (max-width: $md) {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: $lightColor;
+            width: 200px;
+            height: 100%;
         }
     }
 

@@ -9,6 +9,8 @@ export class Navbar extends Component {
         const topNav = document.querySelector('.top-nav');
         const sections = document.querySelectorAll('.anchor-point');
         const sectionLinks = document.querySelectorAll('.top-menu a');
+        const menuToggle = document.querySelector('.menu-row.top-menu');
+        const menuCheckBox = document.querySelector('#menu');
         function determineActiveSection () {
             sections.forEach(section => {
                 sectionLinks.forEach(sectionLink => {
@@ -35,6 +37,9 @@ export class Navbar extends Component {
             }
         }
         window.addEventListener('scroll', determineActiveSection);
+        menuToggle.addEventListener('click', () => {
+            menuCheckBox.checked = false;
+        })
     }
     render() {
         return (

@@ -7,7 +7,6 @@ export class Menu extends Component {
                 <label htmlFor="menu" className="hamburger md-hide">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132H432C440.837 132 448 124.837 448 116V76C448 67.163 440.837 60 432 60H16C7.163 60 0 60 0 60V132C0 132 7.163 132 16 132ZM327.5 292C336.337 292 343.5 284.837 343.5 276V236C343.5 227.163 336.337 220 327.5 220H0V292H327.5ZM112.5 452H432C440.837 452 448 444.837 448 436V396C448 387.163 440.837 380 432 380H112.5V351.5L0 416L112.5 483.5V452Z"></path></svg>
                 </label>
-                <label className="hamburger-close bg-dark-overlay hide"></label>
                 <input type="checkbox" name="menu" id="menu" className="toggler hide"/>
                 <ul className="menu-row top-menu" role="menubar">
                     <li>

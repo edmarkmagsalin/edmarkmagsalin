@@ -84,9 +84,22 @@ nav.top-nav > div {
 
 @media (max-width: 768px) {
   .toggler:checked + ul.top-menu {
-    width: 200px;
+    width: 100%;
     opacity: 1;
     visibility: visible;
+    background-color: rgba(38, 38, 38, 0.8);
+  }
+}
+
+@media (max-width: 768px) {
+  .toggler:checked + ul.top-menu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: white;
+    width: 200px;
+    height: 100%;
   }
 }
 
